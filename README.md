@@ -25,4 +25,6 @@ pip install -r requirements.txt
 ````
 python flaskshing.py
 ````
-Accede al servidor en: http://127.0.0.1:5000
+Accede al servidor en: http://127.0.0.1:
+
+Para exponer tu aplicación Flask en un entorno que no sea localhost, puedes usar herramientas como ngrok, serveo o localtunnel. La elección de la herramienta depende de tus preferencias y necesidades específicas.
