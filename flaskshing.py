@@ -28,7 +28,7 @@ class FakeLogin:
             template_name = 'Generica'
             redirect_url = "https://wikipedia.org"
         else:
-            contenido = "<h1>PÃ¡gina no encontrada</h1>"
+            contenido = "<h1>Página no encontrada</h1>"
             template_name = None
             redirect_url = None
         
