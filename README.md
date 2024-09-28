@@ -14,6 +14,9 @@ Flaskshing es una aplicación de phishing simulada está diseñada en Python uti
 
 ## Instalación
 1. Clonar repositorio
+````
+git clone https://github.com/AlexArce2000/flaskshing.git
+````
 2. Instalar dependencias
 ````
 pip install -r requirements.txt
