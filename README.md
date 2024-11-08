@@ -27,4 +27,39 @@ python flaskshing.py
 ````
 Accede al servidor en: http://127.0.0.1:5000
 
-Para exponer tu aplicación Flask en un entorno que no sea localhost, puedes usar herramientas como ngrok, serveo o localtunnel. La elección de la herramienta depende de tus preferencias y necesidades específicas.
+Para exponer tu aplicación Flask en un entorno que no sea localhost, puedes usar herramientas como ngrok, serveo o localtunnel. La elección de la herramienta depende de tus preferencias y necesidades específicas yo utlizo `cloudflared`.
+
+### Instalar Cloudflared
+#### Actualizar el sistema
+````
+sudo apt update
+sudo apt upgrade
+````
+#### Descargar el binario de cloudflared
+```
+mkdir -p ~/bin
+cd ~/bin
+```
+#### Descarga la última versión de cloudflared:
+```
+curl -LO https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+```
+
+#### Hacer al archivo ejecutable
+
+```
+chmod +x cloudflared-linux-amd64
+```
+
+#### Mover el binario a un directorio en el PATH
+```
+sudo mv cloudflared-linux-amd64 /usr/local/bin/cloudflared
+```
+#### Verificar la instalación
+```
+cloudflared --version
+```
+#### Modo de uso 
+```
+cloudflared tunnel --url http://localhost:3000
+```
