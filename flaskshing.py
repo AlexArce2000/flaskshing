@@ -2,6 +2,20 @@ from flask import Flask, render_template_string, request, redirect
 from datetime import datetime
 from modulos.inicio import banner, banner2, banner3
 import os
+from rich.console import Console
+from rich.markdown import Markdown
+from rich.markdown import Table
+
+MARKDOWN = """
+# Menú de opciones
+
+1. FACEBOOK
+2. INSTAGRAM
+3. GENERICA
+4. NETFLIX
+5. Ver Credenciales capturadas
+6. Salir
+"""
 
 app = Flask(__name__)
 selected_option = None
@@ -79,13 +93,12 @@ def view_credentiales():
 def seleccionar_opcion():
     global selected_option
     banner3()
-    print('MENU DE OPCIONES:')
-    print('1. FACEBOOK')
-    print('2. INSTAGRAM')
-    print('3. GENERICA')
-    print('4. NETFLIX')
-    print('5. Ver Credenciales capturadas')
-    print('6. Salir')
+
+    console = Console()
+    md = Markdown(MARKDOWN)
+    console.print(md)
+
+
     while True:
         try:
             option = int(input("\nSeleccione una opción: "))
