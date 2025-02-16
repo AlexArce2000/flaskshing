@@ -1,6 +1,9 @@
 # FLASKSHING
 Flaskshing es una aplicación de phishing (simulada) diseñada en Python utilizando Flask. Su propósito es simular una página de inicio de sesión para diferentes plataformas y captura las credenciales ingresadas por los usuarios.
 
+[![image.png](https://i.postimg.cc/ZnYhZMPB/image.png)](https://postimg.cc/mznnyV5B)
+
+
 ## Caracteristicas
 * Simulación de páginas de inicio de sesión.
 * Captura y almacenamiento de credenciales ingresadas en un archivo.
@@ -61,5 +64,5 @@ cloudflared --version
 ```
 #### Modo de uso 
 ```
-cloudflared tunnel --url http://localhost:3000
+cloudflared tunnel --url http://localhost:5000
 ```
